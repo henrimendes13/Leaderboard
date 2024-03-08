@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
+using System.Xml.Schema;
 
 #nullable disable
 
@@ -21,6 +22,7 @@ namespace Leaderboard.Migrations
                     Workout1 = table.Column<int>(type: "int", nullable: false),
                     Workout2 = table.Column<int>(type: "int", nullable: false),
                     Workout3 = table.Column<int>(type: "int", nullable: false),
+                    Total = table.Column<int>(type: "int", nullable: false),
                     
                 },
                 constraints: table =>
