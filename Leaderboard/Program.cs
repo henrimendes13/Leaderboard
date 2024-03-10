@@ -6,7 +6,7 @@ builder.Services.AddDbContext<LeaderboardContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("LeaderboardContext") ?? throw new InvalidOperationException("Connection string 'LeaderboardContext' not found.")));
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
 
 var app = builder.Build();
 

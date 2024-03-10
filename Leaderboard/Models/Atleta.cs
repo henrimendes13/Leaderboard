@@ -6,17 +6,11 @@ namespace Leaderboard.Models
 {
 	public class Atleta
 	{
-		[Key] public int Id { get; set; }
+		[Key] 
+		public int Id { get; set; }
 		public string Nome { get; set; }
 
 		public Categoria Categoria { get; set; }
-
-		public int Workout1 { get; set; }
-
-		public int Workout2 { get; set; }
-
-		public int Workout3 { get; set; }
-
 
 
 		public Atleta() { }
@@ -25,11 +19,6 @@ namespace Leaderboard.Models
 		{
 			Nome = nome;
 			Categoria = categoria;
-			Workout1 = workout1;
-			Workout2 = workout2;
-			Workout3 = workout3;
 		}
-
-
 	}
 }

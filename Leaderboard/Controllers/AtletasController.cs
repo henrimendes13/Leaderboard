@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Leaderboard.Data;
@@ -20,12 +16,11 @@ namespace Leaderboard.Controllers
             _context = context;
         }
 
-        // GET: Atletas
         public async Task<IActionResult> Index()
         {
-            return _context.Atleta != null ?
-                        View(await _context.Atleta.ToListAsync()) :
-                        Problem("Entity set 'LeaderboardContext.Atleta'  is null.");
+            var atletas = await _context.Atleta.ToListAsync();
+
+            return View(atletas);
         }
 
         // GET: Atletas/Details/5

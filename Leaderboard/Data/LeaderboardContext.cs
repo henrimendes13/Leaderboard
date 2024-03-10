@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Leaderboard.Models;
 
 namespace Leaderboard.Data
@@ -15,5 +11,7 @@ namespace Leaderboard.Data
         }
 
         public DbSet<Atleta> Atleta { get; set; }
+        public DbSet<Workout> Workout { get; set; }
+        public DbSet<WorkoutAtletaResult> WorkoutAtletaResult { get; set; }
     }
 }

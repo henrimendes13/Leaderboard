@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Leaderboard.Models.DTO.AtletaWorkoutDTO>
+
+@{
+	ViewData["Title"] = "Index";
+}
+
+<h1>Resultados</h1>
+
+<p>
+	<a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+	<thead>
+		<tr>
+			<th>
+				Nome
+			</th>
+			@{int count = 0;}
+			@foreach (var item in Model.FirstOrDefault().AtletaResults)
+			{
+				count++;
+				<th>24.@count</th>
+			}
+
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>
+					@Html.DisplayFor(modelItem => item.AtletaName)
+				</td>
+				@foreach (var resultado in item.AtletaResults)
+				{
+					<td>@resultado</td>
+				}
+
+			</tr>
+		}
+	</tbody>
+</table>
