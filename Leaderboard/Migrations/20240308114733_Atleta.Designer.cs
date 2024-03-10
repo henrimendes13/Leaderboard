@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Leaderboard.Migrations
 {
     [DbContext(typeof(LeaderboardContext))]
-    [Migration("20240308110935_mig3")]
-    partial class mig3
+    [Migration("20240308114733_Atleta")]
+    partial class Atleta
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
